@@ -1,0 +1,57 @@
+{
+	"id": "io.nomie.samples.php.simple",
+	"name": "Simple PHP Cloud App",
+	"img": "http://snap.icorbin.com/nomie-php-example.svg",
+	"summary": "An example in PHP",
+	"uses": [
+		"geo",
+		"commands"
+	],
+	"color": "#116b12",
+	"hostedBy": "MY NAME",
+	"join": "http://localhost:3002/join.php",
+	"more": "http://nomie.io",
+	"collection": {
+		"method": "automatic",
+		"frequency": "1d",
+		"url": "http://localhost:3002/capture.php",
+		"amount": "1d"
+	},
+	"info": {
+		"name" : {
+			"type" : "text",
+			"label" : "Your name?",
+			"placeholder" : "Provide your name",
+			"required" : false,
+			"value" : null
+		},
+		"units": {
+			"type": "select",
+			"value": "fahrenheit",
+			"options": [
+				{
+					"label": "Fahrenheit",
+					"value": "fahrenheit"
+				},
+				{
+					"label": "Celcius",
+					"value": "celcius"
+				}
+			],
+			"label": "Unit of Measure"
+		}
+	},
+	"slots": {
+		"tracker1": {
+			"label": "Sample Tracker",
+			"summary": "Need more information?",
+			"tracker": null,
+			"required": true,
+			"recommended": {
+				"label": "My Sample Tracker",
+				"color": "#4A90E2",
+				"icon": "flaticon-thermometer21"
+			}
+		}
+	}
+}
